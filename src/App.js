@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Layout from './layout/Layout';
+import HomePage from './pages/HomePage';
 
 function App() {
+
+  const [isShow, setIsShow] = useState(false)
+
+  const toggleShow = () => {
+    setIsShow(true)
+  }
+
+  const toggleClose = () => {
+    setIsShow(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout toggleShow={toggleShow}>
+        <Routes>
+          <Route path="/" element={<HomePage isShow={isShow} toggleClose={toggleClose} />} />
+        </Routes>
+      </Layout>
+    </>
   );
 }
 
