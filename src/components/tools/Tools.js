@@ -1,12 +1,17 @@
 import React from 'react'
-import { ToolBg, ToolBox, ToolsContainer, ToolsContent, ToolsLeftColumn, ToolsRightColumn } from './ToolsElements'
+import { ToolBox, ToolsContainer, ToolsContent, ToolsLeftColumn, ToolsRightColumn } from './ToolsElements'
 import { toolsData } from '../../data/toolsData'
+import { Button } from '../Button'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 function Tools() {
     return (
         <ToolsContainer>
             <ToolsContent>
-                <ToolsLeftColumn>
+                <ToolsLeftColumn data-aos="fade-up" data-aos-duration="1000">
                     {toolsData.map(item => (
                         <ToolBox key={item.id}>
                             <img className src={item.img}
@@ -28,6 +33,7 @@ function Tools() {
                         tools, lighting, precision and measuring tools, safety equipment, hand
                         tools, bags and toolboxes and accessories. .
                     </p>
+                    <Button primary>Learn More</Button>
                 </ToolsRightColumn>
             </ToolsContent>
         </ToolsContainer>

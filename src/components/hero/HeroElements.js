@@ -101,7 +101,7 @@ export const HeroBgContent = styled.img`
   transition: 0.4s all !important;
   cursor: pointer;
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1190px) {
       display: none;
   }
 `;

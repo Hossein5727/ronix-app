@@ -9,6 +9,7 @@ export const NavContainer = styled.nav`
   background-color: #FFFFFF;
   color: #000;
 
+
   @media screen and (max-width: 768px) {
   background-color: transparent;
   color: #fff;
@@ -25,23 +26,24 @@ export const NavContent = styled.div`
 
 export const NavLeftColumn = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  height: 80px;
 `;
 
 export const NavLanguage = styled(LanguageIcon)`
   font-size: 28px !important;
-  transform: translate(35px,5px);
+  transform: translate(-35px,5px);
   width: 100%;
   height: 100%;
   cursor: pointer;
+  color: #000;
 `;
 
 export const NavRightColumn = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 80px;
 `;
 
 export const NavBox = styled.div`

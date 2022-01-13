@@ -7,21 +7,21 @@ function Header({ toggleShow }) {
         <NavContainer className=''>
             <NavContent>
                 <NavLeftColumn>
-                    <NavLanguage onClick={toggleShow} />
-                </NavLeftColumn>
-                <NavRightColumn>
-                    {navBoxData.map(item => (
-                        <NavBox key={item.id}>
-                            <p>{item.title}</p>
-                            <NavIcon>{item.icon}</NavIcon>
-                        </NavBox>
-                    ))}
                     <NavLogoBox to="/">
                         <NavLogoImg
                             src='https://wss.ronixtools.com/InternationalAssets/assets/img/general-img/Ronix-Logo.png'
                             alt='ronix'
                         />
                     </NavLogoBox>
+                    {navBoxData.map(item => (
+                        <NavBox key={item.id}>
+                            <p>{item.title}</p>
+                            <NavIcon>{item.icon}</NavIcon>
+                        </NavBox>
+                    ))}
+                </NavLeftColumn>
+                <NavRightColumn>
+                    <NavLanguage onClick={toggleShow} />
                 </NavRightColumn>
             </NavContent>
         </NavContainer>

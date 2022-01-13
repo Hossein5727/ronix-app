@@ -14,6 +14,7 @@ export const ToolsContent = styled.div`
 
   @media screen and (max-width: 768px) {
       flex-wrap: wrap;
+      flex-flow: column-reverse;
   }
 `;
 
@@ -23,7 +24,13 @@ export const ToolsLeftColumn = styled.div`
   align-items: center;
   flex-wrap: wrap;
   padding: 1rem;
-  width: 100%;
+  width: 100vw;
+
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+    margin: 40px 0;
+  padding: 0.5rem;
+  }
 `;
 
 export const ToolsRightColumn = styled.div`
@@ -33,15 +40,16 @@ align-items: flex-start;
 flex-direction: column;
 width: 100%;
 & h1{
-      font-size: clamp(2rem,6vw,2.5rem);
+      font-size: clamp(3rem,6vw,2.5rem);
       color: #000;
       margin-bottom: 7px;
       font-weight: 600;
+      width: 100%;
   };
 
   & h2{
       margin-bottom: 15px;
-      font-size: clamp(1px,6vw,2rem);
+      font-size: clamp(1rem,6vw,2rem);
       color: red;
       font-weight: 600;
   };
@@ -50,6 +58,18 @@ width: 100%;
       font-size: clamp(0.5rem,6vw,1rem);
       color: #000;
       font-weight: 500;
+  }
+
+  @media screen and (max-width: 768px) {
+    & h1{
+      text-align: center;
+      letter-spacing: 4px;
+  };
+
+  & h2{
+    text-align: center;
+    letter-spacing: 3px;
+  };
   }
 `;
 
@@ -61,7 +81,7 @@ export const ToolBox = styled.div`
   padding: 0.5rem;
   background-color: #64748b;
   border-radius: 5px;
-  margin: 15px;
+  margin: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -101,9 +121,9 @@ export const ToolBox = styled.div`
 
   
   @media screen and (max-width: 768px) {
-      width: 110px;
-      height: 110px;
-      margin: 10px;
+      width: 160px;
+      height: 130px;
+      margin: 4px;
 
       & img{
       width: 80px;
