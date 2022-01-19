@@ -12,7 +12,7 @@ export const Button = styled.button`
   border: none;
   outline: none;
   margin-top: 20px;
-  z-index: 99;
+  z-index: 5;
 
   &::before {
     content: "";

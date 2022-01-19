@@ -8,6 +8,11 @@ export const NavContainer = styled.nav`
   height: 90px;
   background-color: #FFFFFF;
   color: #000;
+  position: fixed;
+  z-index: 20;
+  -webkit-box-shadow: 0px 19px 21px -8px rgba(255,255,255,0.57); 
+  box-shadow: 0px 19px 21px -8px rgba(255,255,255,0.57);
+  /* border-bottom: 1px solid #000; */
 
 
   @media screen and (max-width: 768px) {

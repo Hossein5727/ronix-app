@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const DescContainer = styled.section`
   width: 100vw;
   height: 100vh;
-
   position: relative;
+  margin-bottom: 20px;
 `;
 
 export const DescContent = styled.div`
@@ -30,11 +30,16 @@ export const DescContent = styled.div`
 
 export const DescTitle = styled.h1`
   font-size: clamp(2rem,6vw,3rem);
-  letter-spacing: 8px;
+  letter-spacing: 25px;
+  font-weight: 600;
   color: #fff;
   margin-bottom: 10px;
   text-align: center;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    letter-spacing: 5px;
+  }
 `;
 
 export const DescImg = styled.img`

@@ -38,8 +38,6 @@ function ParticleShape() {
                         },
                         modes: {
                             bubble: {
-                                distance: 430,
-                                duration: 3,
                                 opacity: 0.8,
                                 size: 40,
                             },
@@ -47,7 +45,7 @@ function ParticleShape() {
                                 quantity: 5,
                             },
                             repulse: {
-                                distance: 200,
+                                distance: 100,
                                 duration: 0.4,
                             },
                         },
@@ -71,7 +69,7 @@ function ParticleShape() {
                             enable: true,
                             outMode: "bounce",
                             random: false,
-                            speed: 6,
+                            speed: 2,
                             straight: false,
                         },
                         number: {
@@ -89,7 +87,7 @@ function ParticleShape() {
                         },
                         size: {
                             random: true,
-                            value: 5,
+                            value: 3,
                         },
                     },
                     detectRetina: true,

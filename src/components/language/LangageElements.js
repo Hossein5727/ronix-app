@@ -26,14 +26,17 @@ export const LanguageContent = styled.div`
   margin-top: 40px;
   height: 400px;
   overflow-y:scroll;
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
 `;
 
 export const ClosIcon = styled(Close)`
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 35px !important;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 `;
 
@@ -44,6 +47,7 @@ export const Title = styled.h1`
   margin-top: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid #ccc;
+  z-index: 10;
 `;
 
 export const Languages = styled.div`
@@ -82,3 +86,4 @@ export const LanguageCountryImg = styled.img`
   object-fit: cover;
   border-radius: 5px;
 `;
+

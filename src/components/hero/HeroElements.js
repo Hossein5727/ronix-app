@@ -4,7 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 export const HeroContainer = styled.section`
   width: 100vw;
-  height: 85.6vh;
+  height: 100vh;
   position: relative;
   overflow-x: hidden;
   background-color: #fff !important;
@@ -90,7 +90,7 @@ export const PrevSlide = styled(ArrowBackIosNewIcon)`
 
 export const HeroBgContent = styled.img`
   position: absolute;
-  top: 12%;
+  top: 28%;
   left:22%;
   width: 750px;
   height: 350px;
