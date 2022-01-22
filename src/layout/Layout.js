@@ -1,7 +1,8 @@
 import React from 'react'
+import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 
-function Layout({ children, toggleShow,toggleShowSearch }) {
+function Layout({ children, toggleShow, toggleShowSearch }) {
     return (
         <div>
             <Header
@@ -9,6 +10,7 @@ function Layout({ children, toggleShow,toggleShowSearch }) {
                 showSearch={toggleShowSearch}
             />
             {children}
+            <Footer />
         </div>
     )
 }
