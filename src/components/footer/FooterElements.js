@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  height: 350px;
+  height: 400px;
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0) 75%, rgba(255,255,255,0.7903536414565826) 160%);
   position: relative;
