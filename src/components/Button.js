@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
   cursor: pointer;
@@ -32,4 +32,12 @@ export const Button = styled.button`
       transform: scaleY(1);
 }
 
-`;
+${props => props.forSearch && css`
+width: 90px;
+height: 35px;
+background:#ED1C24;
+color: #ffffff;
+margin-left: 2px;
+`}
+
+    `;

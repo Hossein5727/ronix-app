@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 function App() {
 
   const [isShow, setIsShow] = useState(false)
+  const [isShowSearch, setIsShowSearch] = useState(false)
 
   const toggleShow = () => {
     setIsShow(true)
@@ -16,11 +17,27 @@ function App() {
     setIsShow(false)
   }
 
+  const toggleCloseSearchClose = () => {
+    setIsShowSearch(false)
+  }
+
+  const toggleShowSearch = () => {
+    setIsShowSearch(true)
+  }
+
   return (
     <>
-      <Layout toggleShow={toggleShow}>
+      <Layout
+        toggleShow={toggleShow}
+        toggleShowSearch={toggleShowSearch}
+      >
         <Routes>
-          <Route path="/" element={<HomePage isShow={isShow} toggleClose={toggleClose} />} />
+          <Route path="/" element={<HomePage
+            isShow={isShow}
+            toggleClose={toggleClose}
+            isShowSearch={isShowSearch}
+            toggleCloseSearch={toggleCloseSearchClose}
+          />} />
         </Routes>
       </Layout>
     </>

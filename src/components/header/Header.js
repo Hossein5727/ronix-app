@@ -2,7 +2,7 @@ import React from 'react'
 import { navBoxData } from '../../data/navBoxData'
 import { NavBox, NavContainer, NavContent, NavIcon, NavLanguage, NavLeftColumn, NavLogoBox, NavLogoImg, NavRightColumn } from './HeaderElements'
 
-function Header({ toggleShow }) {
+function Header({ toggleShow, showSearch }) {
     return (
         <NavContainer className=''>
             <NavContent>
@@ -15,8 +15,17 @@ function Header({ toggleShow }) {
                     </NavLogoBox>
                     {navBoxData.map(item => (
                         <NavBox key={item.id}>
-                            <p>{item.title}</p>
-                            <NavIcon>{item.icon}</NavIcon>
+                            {item.title === "Search" ? (
+                                <div className='flex items-center' onClick={showSearch}>
+                                    <p>{item.title}</p>
+                                    <NavIcon>{item.icon}</NavIcon>
+                                </div>
+                            ) : (
+                                <div className='flex items-center'>
+                                    <p>{item.title}</p>
+                                    <NavIcon>{item.icon}</NavIcon>
+                                </div>
+                            )}
                         </NavBox>
                     ))}
                 </NavLeftColumn>

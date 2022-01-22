@@ -58,6 +58,7 @@ width: 100%;
       font-size: clamp(0.5rem,6vw,1rem);
       color: #000;
       font-weight: 500;
+      line-height: 30px;
   }
 
   @media screen and (max-width: 768px) {

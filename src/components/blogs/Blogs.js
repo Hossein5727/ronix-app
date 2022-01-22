@@ -8,7 +8,11 @@ function Blogs({ images, title, desc }) {
         <BlogsContainer>
             <BLogsContent img={Image1}>
                 <ImageContainer>
-                    <ImageGallery items={images} />
+                    <ImageGallery
+                        lazyLoad={true}
+                        showBullets={true}
+                        items={images}
+                    />
                 </ImageContainer>
                 <BLogsContainer>
                     <Title>{title}</Title>

@@ -11,7 +11,7 @@ export const BLogsContent = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  padding: 1rem;
+  padding: 5px;
   gap: 15px;
   
   
@@ -40,5 +40,5 @@ export const Desc = styled.p`
   `;
 
 export const ImageContainer = styled.div`
-  padding: 5px;
+  /* padding: 5px; */
 `;
