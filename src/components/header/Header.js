@@ -1,8 +1,8 @@
 import React from 'react'
 import { navBoxData } from '../../data/navBoxData'
-import { NavBox, NavContainer, NavContent, NavIcon, NavLanguage, NavLeftColumn, NavLogoBox, NavLogoImg, NavRightColumn } from './HeaderElements'
+import { NavBox, NavContainer, NavContent, NavIcon, NavLanguage, NavLeftColumn, NavLogoBox, NavLogoImg, NavMenu, NavRightColumn } from './HeaderElements'
 
-function Header({ toggleShow, showSearch }) {
+function Header({ toggleShow, showSearch, toggleShowDrop }) {
     return (
         <NavContainer className=''>
             <NavContent>
@@ -31,6 +31,7 @@ function Header({ toggleShow, showSearch }) {
                 </NavLeftColumn>
                 <NavRightColumn>
                     <NavLanguage onClick={toggleShow} />
+                    <NavMenu onClick={toggleShowDrop} />
                 </NavRightColumn>
             </NavContent>
         </NavContainer>

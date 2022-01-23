@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import LanguageIcon from '@mui/icons-material/Language';
-import { Search } from "@mui/icons-material";
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from "react-router-dom";
 
 export const NavContainer = styled.nav`
@@ -91,4 +91,18 @@ export const NavLogoBox = styled(Link)`
 
 export const NavLogoImg = styled.img`
   object-fit: contain;
+`;
+
+export const NavMenu = styled(MenuIcon)`
+  font-size: 30px !important;
+  transform: translate(-30px,5px);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #000;
+  display: none !important;
+
+  @media screen and (max-width: 768px) {
+    display: block !important;
+  }
 `;

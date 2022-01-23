@@ -8,6 +8,7 @@ function App() {
 
   const [isShow, setIsShow] = useState(false)
   const [isShowSearch, setIsShowSearch] = useState(false)
+  const [showDrop, setShowDrop] = useState(false)
 
   const toggleShow = () => {
     setIsShow(true)
@@ -25,11 +26,22 @@ function App() {
     setIsShowSearch(true)
   }
 
+  const toggleShowDrop = () => {
+    setShowDrop(true)
+  }
+
+  const toggleCloseDrop = () => {
+    setShowDrop(false)
+  }
+
   return (
     <>
       <Layout
         toggleShow={toggleShow}
         toggleShowSearch={toggleShowSearch}
+        toggleShowDrop={toggleShowDrop}
+        showDrop={showDrop}
+        toggleCloseDrop={toggleCloseDrop}
       >
         <Routes>
           <Route path="/" element={<HomePage
