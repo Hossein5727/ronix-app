@@ -8,10 +8,10 @@ export const DropDownConatainer = styled.section`
   top: 0;
   width: 200px;
   height: 100vh;
-  background-color: #64748b;
-  color: #fff;
+  background-color: #f8fafc;
+  color: #000;
   z-index: ${({ showDrop }) => (showDrop ? "120" : "0")};
-  transition: all 0.3s !important;
+  transition: all 0.6s ease-in-out !important;
 `;
 
 export const DropDownContent = styled.div`
