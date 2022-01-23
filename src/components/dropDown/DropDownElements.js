@@ -4,14 +4,16 @@ import { Close } from "@mui/icons-material";
 
 export const DropDownConatainer = styled.section`
   position: absolute;
-  right: ${({ showDrop }) => (showDrop ? "0" : "-1000px")};
+  right: ${({ showDrop }) => (showDrop ? "0" : "-200px")};
   top: 0;
   width: 200px;
   height: 100vh;
   background-color: #f8fafc;
   color: #000;
-  z-index: ${({ showDrop }) => (showDrop ? "120" : "0")};
-  transition: all 0.6s ease-in-out !important;
+  z-index: 120;
+  transition: all 0.5s ease-in-out !important;
+  opacity: ${({ showDrop }) => (showDrop ? "1" : "0")};
+  /* display: ${({ showDrop }) => (showDrop ? "block" : "none")}; */
 `;
 
 export const DropDownContent = styled.div`
