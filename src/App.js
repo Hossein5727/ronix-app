@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Layout
         toggleShow={toggleShow}
         toggleShowSearch={toggleShowSearch}
@@ -52,7 +52,7 @@ function App() {
           />} />
         </Routes>
       </Layout>
-    </>
+    </div>
   );
 }
 
